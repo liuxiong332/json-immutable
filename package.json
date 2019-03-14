@@ -1,6 +1,6 @@
 {
   "name": "json-immutable-bn",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "main": "lib/index",
   "scripts": {
     "prepublish": "babel src/ -d lib/",
@@ -11,7 +11,6 @@
     "bignumber.js": "*"
   },
   "dependencies": {
-    "bignumber.js": "^8.1.1",
     "json-stream-stringify": "1.5.x"
   },
   "devDependencies": {
