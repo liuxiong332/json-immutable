@@ -3,12 +3,13 @@ const immutable = require('immutable')
 const JSONStreamStringify = require('json-stream-stringify')
 
 const nativeTypeHelpers = require('./helpers/native-type-helpers')
-
+const BigNumber = require('bignumber.js');
 
 function serialize(data, options = {}) {
   if (immutable.Iterable.isIterable(data) ||
       data instanceof immutable.Record ||
-      nativeTypeHelpers.isSupportedNativeType(data)
+      nativeTypeHelpers.isSupportedNativeType(data) ||
+      BigNumber.isBigNumber(data)
   ) {
     const patchedData = Object.create(data)
 
@@ -62,6 +63,9 @@ function replace(key, value) {
   }
   else if (nativeTypeHelpers.isRegExp(value)) {
     result = { '__regexp': value.toString() }
+  }
+  else if (BigNumber.isBigNumber(value)) {
+    result = { '__bignumber': value.toString() }
   }
   else if (typeof value === 'object' && value !== null) {
     result = replacePlainObject(value, replace)

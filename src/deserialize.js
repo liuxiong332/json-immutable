@@ -1,5 +1,5 @@
 const immutable = require('immutable')
-
+const BigNumber = require('bignumber.js');
 
 function deserialize(json, options = {}) {
   return JSON.parse(json, (key, value) => {
@@ -19,6 +19,8 @@ function revive(key, value, options) {
     } else if (value['__regexp']) {
       const regExpParts = value['__regexp'].split('/')
       return new RegExp(regExpParts[1], regExpParts[2])
+    } else if (value['__bignumber']) {
+      return new BigNumber(value['__bignumber']);
     }
   }
   return value

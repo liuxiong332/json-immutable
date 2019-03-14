@@ -1,5 +1,5 @@
 {
-  "name": "json-immutable",
+  "name": "json-immutable-bn",
   "version": "0.4.0",
   "main": "lib/index",
   "scripts": {
@@ -7,9 +7,11 @@
     "test": "npm run prepublish && ava"
   },
   "peerDependencies": {
-    "immutable": "3.x.x"
+    "immutable": "3.x.x",
+    "bignumber.js": "*"
   },
   "dependencies": {
+    "bignumber.js": "^8.1.1",
     "json-stream-stringify": "1.5.x"
   },
   "devDependencies": {
