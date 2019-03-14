@@ -1,5 +1,5 @@
 const immutable = require('immutable')
-const BigNumber = require('bignumber.js');
+const BigNumber = require('bignumber.js/bignumber.js');
 
 function deserialize(json, options = {}) {
   return JSON.parse(json, (key, value) => {

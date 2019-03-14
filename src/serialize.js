@@ -3,7 +3,7 @@ const immutable = require('immutable')
 const JSONStreamStringify = require('json-stream-stringify')
 
 const nativeTypeHelpers = require('./helpers/native-type-helpers')
-const BigNumber = require('bignumber.js');
+const BigNumber = require('bignumber.js/bignumber.js');
 
 function serialize(data, options = {}) {
   if (immutable.Iterable.isIterable(data) ||

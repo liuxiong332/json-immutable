@@ -1,7 +1,7 @@
 import it from 'ava'
 
 import helpers from './_helpers'
-const BigNumber = require('bignumber.js');
+const BigNumber = require('bignumber.js/bignumber.js');
 
 
 it('should serialize a big number value', (test) => {
