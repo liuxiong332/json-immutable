@@ -70,6 +70,9 @@ function replace(key, value) {
   else if (typeof value === 'object' && value !== null) {
     result = replacePlainObject(value, replace)
   }
+  else if (value === undefined) {
+    result = null;
+  }
 
   return result
 }

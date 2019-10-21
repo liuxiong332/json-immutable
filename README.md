@@ -36,6 +36,19 @@ const json = serialize(data)
 const result = deserialize(json)
 ```
 
+### bignumber.js Types
+
+```javascript
+let x = new BigNumber('1111222233334444555566');
+
+// Serialize
+const json = serialize(x)
+// json == '{"__bignumber":1111222233334444555566}'
+
+// Deserialize
+const result = deserialize(json)
+```
+
 ### Immutable Records
 
 ```javascript

@@ -1,6 +1,6 @@
 {
   "name": "json-immutable-bn",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "main": "lib/index",
   "scripts": {
     "prepublish": "babel src/ -d lib/",
@@ -24,6 +24,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/avocode/json-immutable"
+    "url": "https://github.com/liuxiong332/json-immutable"
   }
 }
